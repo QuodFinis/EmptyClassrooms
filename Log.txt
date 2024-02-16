@@ -1,0 +1,24 @@
+4/7/2023
+Trying to add page for each room which will have space for schedule, comments, capacity and booking feature.
+Running into problem where the page is not accessable.
+Going to check if room is added to database.
+
+Learned about @staticmethod
+When you create a method in a class, you can access it using the instance of the class. However, a static method is a method that belongs to the class itself, rather than to any particular instance of the class.
+
+For example, if you have a class called Person and a method called calculate_age, you would normally call it like this:
+-----------------------------------------------------------------------------------
+person = Person('John', 'Doe', '01/01/1990')
+age = person.calculate_age()
+-----------------------------------------------------------------------------------
+However, if you make calculate_age a static method, you can call it like this:
+-----------------------------------------------------------------------------------
+age = Person.calculate_age('01/01/1990')
+-----------------------------------------------------------------------------------
+This means that you can use the method without creating an instance of the class, which can be useful in certain situations.
+
+tried to add location class to room and messed up the database. now i have to figure out how to fix the database.
+
+but once that works, i believe i should be able to add rooms using Room(location='NAC 9/111')
+
+

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div style="max-width: 400px; margin: 0 auto;">
+        <h1 style="text-align: center;">Enter Your Name</h1>
+        <form action="" method="post" novalidate>
+            {{ form.hidden_tag() }}
+            <div style="margin-bottom: 10px;">
+                {{ form.name.label }}
+                {{ form.name(size=50) }}
+            </div>
+            <div style="text-align: center;">
+                {{ form.submit() }}
+            </div>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+<head>
+    <style>
+        select#floor {
+            background-color: #a5a5a5;
+        }
+    </style>
+
+</head>
+{% block content %}
+    <style>
+        body {
+            background-image: url("{{ url_for('static', filename='study_gif.gif') }}");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        h1, p, form {
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px #000;
+
+        }
+    </style>
+
+<form>
+  <label for="floor-select">Filter by floor:</label>
+  <select id="floor-select" name="floor">
+      <option value="">All floors</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+  </select>
+  <button type="submit">Apply filter</button>
+</form>
+
+    <h1>Available Classes</h1>
+    <p>
+        {% for line in Classrooms %}
+        <br>
+        {{ line }}
+        <br>
+        {% endfor %}
+    </p>
+
+{% endblock %}

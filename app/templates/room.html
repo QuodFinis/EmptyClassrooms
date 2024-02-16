@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Room {{ room.floor }}/{{ room.number }}</h1>
+  <p>Occupants:</p>
+  <ul>
+    {% for user in room.occupants %}
+      <li>{{ user.username }}</li>
+    {% endfor %}
+  </ul>
+
+  <h2>Comments</h2>
+
+
+  <hr>
+
+  <ul>
+    {% for comment in room.comments %}
+      <li>{{ comment.text }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
