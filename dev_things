@@ -1,0 +1,26 @@
+should i create the script to extract the data or the bare bones of the website?
+    ideally i would want the site to be able to run the script to get the data the day a new semester starts
+
+    is it possible for a website to run selenium?
+        yes but not recommended due to resource requirements and sec issues
+        alternative: create the selenium script to run on cloud ( who is hosting this? ) website can send the request to run the script
+
+    create the (selenium, python) script first
+        scapre through html
+        alterantive: get json from backend
+            it seems that cuny is using cloudflare CDN DataTables to render the page after parsing through the data
+            would i be able to curl the requests and send/fetch them myself?
+            nah
+
+        since this will be on cloud, i want it to use the least amount of resources possible
+            i was thinking about making it such that data is scaped and added when someone from that school/time place want to see
+            that may or may not save space and i think its better to just implement it rather than possibly save space for added compelxity
+
+            using HtmlUnitDriver for lightweight headless(no gui) browser
+
+            how do i make it run on the cloud?
+                it needs to have selenium and download the drivers and stuff?
+                docker?
+
+
+
