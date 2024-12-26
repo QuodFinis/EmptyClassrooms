@@ -1,0 +1,4 @@
+# ignore these files and directories when scanning for things to possibly upload to github
+/venv
+.gitignore
+.idea
